@@ -37,6 +37,7 @@ set :npm_target_path, -> { release_path.join('subdir') } # default not set
 set :npm_flags, '--production --silent --no-progress'    # default
 set :npm_roles, :all                                     # default
 set :npm_env_variables, {}                               # default
+set :build_command                                       # default not set. Don't forget to set this.
 ```
 
 ### Dependencies

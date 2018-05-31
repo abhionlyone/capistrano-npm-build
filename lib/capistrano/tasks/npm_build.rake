@@ -10,7 +10,18 @@ namespace :npm do
     end
   end
 
+  task :build do
+    on roles fetch(:npm_roles) do
+      within fetch(:npm_target_path, release_path) do
+        with fetch(:npm_env_variables, {}) do
+          execute "sh -c \"cd #{fetch(:deploy_to)}/current/ && #{fetch(:build_command)}\""
+        end
+      end
+    end
+  end
+
   before 'deploy:updated', 'npm:install'
+  after 'npm:install', 'npm:build'
 
   task :prune do
     on roles fetch(:npm_roles) do
