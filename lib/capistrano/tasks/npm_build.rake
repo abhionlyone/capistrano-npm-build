@@ -4,7 +4,7 @@ namespace :npm do
       within fetch(:npm_target_path, release_path) do
         with fetch(:npm_env_variables, {}) do
           execute :npm, 'install', fetch(:npm_flags)
-          execute "sh -c \"cd #{fetch(:deploy_to)}/current/ && #{fetch(:build_command)}\""
+          # execute "sh -c \"cd #{fetch(:deploy_to)}/current/ && #{fetch(:build_command)}\""
         end
       end
     end
