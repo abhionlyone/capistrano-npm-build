@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'capistrano-npm-build'
-  spec.version       = '1.0.2'
+  spec.version       = '1.0.1'
   spec.authors       = ['Abhilash Reddy']
   spec.email         = ['abhilashmv@outlook.com']
   spec.description   = %q{npm build support for Capistrano 3.x}

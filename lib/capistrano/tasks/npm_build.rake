@@ -4,7 +4,7 @@ namespace :npm do
       within fetch(:npm_target_path, release_path) do
         with fetch(:npm_env_variables, {}) do
           execute :npm, 'install', fetch(:npm_flags)
-          execute :npm, 'run', fetch(:build_commmand)
+          execute "sh -c \"cd #{fetch(:deploy_to)}/current/ && #{fetch(:build_command)}\""
         end
       end
     end
@@ -36,6 +36,5 @@ namespace :load do
     set :npm_flags, %w(--production --silent --no-progress)
     set :npm_prune_flags, '--production'
     set :npm_roles, :all
-    set :build_commmand, 'build'
   end
 end
