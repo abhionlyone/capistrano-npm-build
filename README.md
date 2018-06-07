@@ -2,6 +2,9 @@
 
 npm support for Capistrano 3.x
 
+
+[![Gem Version](https://badge.fury.io/rb/capistrano-npm-build.svg)](https://badge.fury.io/rb/capistrano-npm-build)
+
 ## Installation
 
 Add this line to your application's Gemfile:
