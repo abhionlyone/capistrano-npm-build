@@ -1,9 +1,7 @@
-# Capistrano::npm::Build
+# Capistrano::npm::Build [![Gem Version](https://badge.fury.io/rb/capistrano-npm-build.svg)](https://badge.fury.io/rb/capistrano-npm-build)
 
 npm support for Capistrano 3.x
 
-
-[![Gem Version](https://badge.fury.io/rb/capistrano-npm-build.svg)](https://badge.fury.io/rb/capistrano-npm-build)
 
 ## Installation
 
