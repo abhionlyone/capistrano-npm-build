@@ -14,7 +14,7 @@ namespace :npm do
     on roles fetch(:npm_roles) do
       within fetch(:npm_target_path, release_path) do
         with fetch(:npm_env_variables, {}) do
-          execute "sh -c \"cd #{fetch(:deploy_to)}/current/ && #{fetch(:build_command)}\""
+          execute "sh -c \"cd #{release_path} && #{fetch(:build_command)}\""
         end
       end
     end
